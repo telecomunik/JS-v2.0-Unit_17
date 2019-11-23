@@ -114,9 +114,9 @@ document.querySelector('.b-7').onclick = t7;
 
 function t8() {
     let b8 = [3, 14, 15, 92, "6", "5", "hello", 32];
-    b8_res = b8.filter(function (elem, index) {
-        if (index % 2 == 0) {
-            return true;
+    let out = b8.filter(function (elem, index) {
+        if (elem % 2 == 0 && typeof (elem) == 'number') {
+            b8_res.push(index);
         }
     });
     console.log(b8_res);
